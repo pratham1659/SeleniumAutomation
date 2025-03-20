@@ -1,6 +1,5 @@
 /target/
-Users
-.classpath  
+/test-output/
 .project  
 .settings/  
 bin/              # Compiled files  
@@ -16,3 +15,4 @@ chromedriver.log  # WebDriver logs
 geckodriver.log   # Firefox WebDriver logs  
 .DS_Store  
 Thumbs.db  
+test-output/index.html

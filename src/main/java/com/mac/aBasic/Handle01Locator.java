@@ -40,16 +40,16 @@ public class Handle01Locator {
 	}
 
 	@Test(priority = 0)
-	public void verifyWebPage() {
+	public void verifySeleniumWebPage() {
 
 		String titleString = driver.getTitle();
 		assertEquals(titleString, "Selenium Web");
 	}
 
-	@Test(priority = 1)
-	public void contactFormTest() throws InterruptedException {
+	@Test(priority = 1, enabled = false)
+	public void testContactFormSubmissionSuccessfully() throws InterruptedException {
 
-		driver.findElement(By.linkText("CONTACT US FORM TEST")).click();
+		driver.findElement(By.linkText("Contact Us")).click();
 
 		driver.findElement(By.name("firstName")).sendKeys("Pratham");
 		driver.findElement(By.name("lastName")).sendKeys("Kumar");
@@ -64,36 +64,35 @@ public class Handle01Locator {
 
 	}
 
-	@Test(priority = 2)
-	public void navigateBack() throws InterruptedException {
+	@Test(priority = 2, enabled = false)
+	public void navigateBackAndGoToActionsDragAndDrop() throws InterruptedException {
 
 		driver.navigate().to(baseUrl);
 
-		driver.findElement(By.linkText("ACTIONS")).click();
+		driver.findElement(By.linkText("Actions")).click();	
+	
 
-		WebElement dragA = driver.findElement(By.id("dragElement1"));
-		WebElement box2 = driver.findElement(By.name("box2"));
+		WebElement dragA = driver.findElement(By.cssSelector("div.flex-wrap > div.cursor-grab:first-child"));
+		WebElement box2 = driver.findElement(By.cssSelector("div.flex-wrap > div.rounded-xl:first-child"));
 
 		Actions actions = new Actions(driver);
 		actions.clickAndHold(dragA).moveToElement(box2).release().build().perform();
 
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 
 	}
 
-	@Test(priority = 3)
-	public void test() throws Exception {
+	@Test(priority = 3, enabled = false)
+	public void testPredictedSearchInTool() throws Exception {
 
 		System.out.println("Execution Start");
 
-		driver.findElement(By.linkText("PREDICTIVE SEARCH")).click();
+		driver.findElement(By.linkText("Predictive Search")).click();
 
-		driver.findElement(By.xpath("//form/input")).sendKeys("India");
+		driver.findElement(By.cssSelector("input[placeholder='Search countries...']")).sendKeys("India");
 
-		driver.findElement(By.xpath("//form/button[text()='Search']")).click();
+		String checkIndia = driver.findElement(By.cssSelector("div[role='listbox'] > ul:first-child")).getText();
 
-		String checkIndia = driver
-				.findElement(By.xpath("//div[@class='predictDialoge']/descendant::li[text()='India']")).getText();
 
 		Assert.assertEquals(checkIndia, "India");
 
@@ -111,17 +110,13 @@ public class Handle01Locator {
 		System.out.println(pageSourceString);
 		System.out.println("Source Length: " + sourceLength);
 
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
+		
 	}
 
-	@Test(priority = 4)
-	public void testLogin() throws Exception {
+	@Test(priority = 1)
+	public void testValidLoginCredentials() throws Exception {
 
-		driver.findElement(By.linkText("LOGIN PORTAL TEST")).click();
+		driver.findElement(By.linkText("Login Portal")).click();
 
 		// Locating web element
 		WebElement uName = driver.findElement(By.name("username"));
@@ -129,18 +124,20 @@ public class Handle01Locator {
 		WebElement remElement = driver.findElement(By.name("rememberMe"));
 		WebElement loginBtn = driver.findElement(By.xpath("//button[@type='submit']"));
 
-		uName.sendKeys("testuser");
-		pswd.sendKeys("Password@123");
+		uName.sendKeys("pratham1659");
+		pswd.sendKeys("pratham1659");
 		remElement.click();
 		loginBtn.click();
 
 		try {
-
-			WebElement logoutBtn = driver.findElement(By.xpath("//button[text()='Logout']"));
+			WebElement logoutBtn = driver.findElement(By.xpath("//button[text()='Sign Out']"));
 
 			if (logoutBtn.isDisplayed()) {
 				logoutBtn.click();
 				System.out.println("LogOut Successful!");
+			}else {
+				String invCredElement = driver.findElement(By.cssSelector(".text-red-500.text-sm.text-center.mt-2")).getText();
+				Assert.assertEquals(invCredElement, "Invalid Credentials");
 			}
 		} catch (Exception e) {
 			System.out.println("Incorrect login....");
