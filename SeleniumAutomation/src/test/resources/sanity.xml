@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite name="Selenium TestNG Automation Suite">
+
+	<test name="TestNG Features">
+
+		<parameter name="browser" value="chrome" />
+		<parameter name="url"
+			value="https://tutorialsninja.com/demo/" />
+		<parameter name="emailId" value="test@yahoo.com" />
+		<parameter name="env" value="QA" />
+		<parameter name="password" value="12345" />
+
+		<classes>
+			<class name="com.mac.bTestNg.TestNg04Parameter" />
+		</classes>
+	</test>
+</suite>

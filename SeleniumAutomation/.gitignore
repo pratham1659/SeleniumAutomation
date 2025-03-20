@@ -1,0 +1,17 @@
+/target/
+.classpath  
+.project  
+.settings/  
+bin/              # Compiled files  
+target/           # Maven build output  
+target/           # Maven output directory  
+*.mvn/            # Maven wrapper files  
+!**/src/main/resources/**  # Keep configuration files  
+.gradle/          # Gradle build folder  
+build/            # Gradle build directory  
+selenium.log      # Selenium logs  
+screenshots/      # Screenshots taken during test failures  
+chromedriver.log  # WebDriver logs  
+geckodriver.log   # Firefox WebDriver logs  
+.DS_Store  
+Thumbs.db  

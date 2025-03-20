@@ -1,0 +1,59 @@
+00:57:01.119 [main] INFO  - Logged into Website
+00:57:01.129 [main] INFO  - Test Start
+00:57:11.329 [main] INFO  - Search Results Fetch from Site
+00:57:11.482 [main] INFO  - Test Stop
+01:18:10.591 [main] INFO  - Logged into Website
+01:18:10.705 [main] INFO  - Test Stop
+01:21:02.972 [main] INFO  - Navigate to HomePage
+01:21:04.459 [main] INFO  - Navigate to HomePage
+01:27:44.556 [main] INFO  - Navigate to HomePage
+01:29:23.315 [main] INFO  - Navigate to HomePage
+01:29:23.322 [main] INFO  - Verify HomePage Logo
+01:29:53.611 [main] INFO  - Navigate to HomePage
+01:29:53.615 [main] INFO  - Verify HomePage Logo
+01:40:34.776 [main] INFO  - Search Executed, Product not Found
+01:40:36.870 [main] INFO  - Search Executed, Product not Found
+01:43:03.633 [main] INFO  - Logged into Website
+01:43:03.636 [main] INFO  - Start the Test
+01:43:05.597 [main] INFO  - Logged into Website
+01:43:05.868 [main] INFO  - Search Executed, Product not Found
+01:43:07.469 [main] INFO  - Logged into Website
+01:43:07.659 [main] INFO  - Search Executed, Product not Found
+01:43:49.429 [main] INFO  - Logged into Website
+01:43:49.435 [main] INFO  - Start the Test
+01:43:51.417 [main] INFO  - Logged into Website
+01:43:51.417 [main] INFO  - Start the Test
+01:43:53.428 [main] INFO  - Logged into Website
+01:43:53.428 [main] INFO  - Start the Test
+01:43:55.214 [main] INFO  - Logged into Website
+01:43:55.220 [main] INFO  - Start the Test
+01:43:57.761 [main] INFO  - Logged into Website
+01:43:58.063 [main] INFO  - Search Executed, Product not Found
+01:43:59.749 [main] INFO  - Logged into Website
+01:43:59.944 [main] INFO  - Search Executed, Product not Found
+01:45:53.122 [main] INFO  - Logged into Website
+01:45:53.126 [main] INFO  - Start the Test
+01:46:03.266 [main] INFO  - Logged into Website
+01:46:04.872 [main] INFO  - Logged into Website
+01:46:05.084 [main] INFO  - Search Executed, Product not Found
+01:46:32.198 [main] INFO  - Logged into Website
+01:46:32.204 [main] INFO  - Start the Test
+01:46:32.478 [main] WARN  - Search Executed, Product Found
+01:46:34.211 [main] INFO  - Logged into Website
+01:46:34.447 [main] INFO  - Search Executed, Product not Found
+01:46:36.077 [main] INFO  - Logged into Website
+01:46:36.267 [main] INFO  - Search Executed, Product not Found
+01:47:24.344 [main] INFO  - Logged into Website
+01:47:24.349 [main] INFO  - Start the Test
+01:47:24.619 [main] WARN  - Search Executed, Product Found
+01:47:26.313 [main] INFO  - Logged into Website
+01:47:26.583 [main] INFO  - Search Executed, Product not Found
+01:47:28.420 [main] INFO  - Logged into Website
+01:47:28.631 [main] INFO  - Search Executed, Product not Found
+01:48:03.283 [main] INFO  - Logged into Website
+01:48:03.291 [main] INFO  - Start the Test
+01:48:03.570 [main] WARN  - Search Executed, Product Found
+01:48:05.222 [main] INFO  - Logged into Website
+01:48:05.555 [main] INFO  - Search Executed, Product not Found
+01:48:06.744 [main] INFO  - Logged into Website
+01:48:07.439 [main] INFO  - Search Executed, Product not Found
